@@ -1,60 +1,51 @@
-# DBA Challenge 20240802
+# Teste de Habilidades SQL
+
+Utilizando a base de dados *Bike Store Inc.* para efetuar consultas em T-SQL e obter métricas relevantes para as equipes de Marketing e Comercial.
+
+---
+
+## Linguagem e Tecnologia Utilizada
+
+* **Linguagem:** T-SQL (Transact-SQL)
+* **Ferramenta de SGBD:** Microsoft SQL Server Management Studio (SSMS)
+
+## Análises e Métricas Desenvolvidas
+
+Nesta seção, você pode documentar cada uma das consultas que criamos, explicando o objetivo de negócio de cada uma.
+
+* **Consulta 1: Listar todos Clientes que não tenham realizado uma compra**
+    * **Objetivo:** Identificar todos os clientes que nunca realizaram um pedido na loja, trazendo informações relevantes como cidade e contato.
+    * **Info:** Pela performance nessa consulta foi optado por utilizar o NOT EXISTS invés de JOIN .
+    * **Arquivo:** `01_clientes_sem_pedidos.sql`
+
+* **Consulta 2: Listar os Produtos que não tenham sido comprados"**
+    * **Objetivo:** Levantar todos os produtos que nunca foram vendidos.
+    * **Info:** Lista de `product_id` para análise de inventário e possíveis promoções.
+    * **Arquivo:** `02_produtos_nao_vendidos.sql`
+
+* **Consulta 3: Listar os Produtos sem Estoque**
+    * **Objetivo:** Listar produtos que não possuem estoque em nenhuma das lojas.
+    * **Info:** Lista de product_id onde quantity for zero ou nulo.
+    * **Arquivo:** `03_produtos_sem_estoque.sql`
+
+* **Consulta 4: Agrupar a quantidade de vendas que uma determinada Marca por Loja.**
+    * **Objetivo:** Trazer um apanhado contendo quantidade total de vendas por Marca/Loja.
+    * **Info:** Trazer a soma de quantity utilizando filtros de brand_id e store_id.
+    * **Arquivo:** `04_vendas_marca_loja.sql`
+
+* **Consulta 5: Listar os Funcionarios que não estejam relacionados a um Pedido.**
+    * **Objetivo:** Trazer uma listagem de funcionários que não efetuam pedidos ou não estáo em produtividade.
+    * **Info:** Lista de staff_id onde não constem na tabela de orders.
+    * **Arquivo:** `05_staff_sem_orders.sql`
 
 
-## Introdução
+## Como Utilizar
 
-Nesse desafio trabalharemos utilizando a base de dados da empresa Bike Stores Inc com o objetivo de obter métricas relevantes para equipe de Marketing e Comercial.
+1.  Clone ou baixe este repositório.
+2.  Os arquivos com a extensão `.sql` contêm todas as queries desenvolvidas para o projeto.
+3.  Você pode abrir qualquer um desses arquivos no Microsoft SQL Server Management Studio (ou outro editor de sua preferência, como Azure Data Studio ou VS Code).
+4.  Com o arquivo aberto e conectado à base de dados **Bike Store**, você pode executar as consultas para obter os resultados.
 
-Com isso, teremos que trabalhar com várioas consultas utilizando conceitos como `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `GROUP BY` e `COUNT`.
+---
 
-### Antes de começar
- 
-- O projeto deve utilizar a Linguagem específica na avaliação. Por exempo: SQL, T-SQL, PL/SQL e PSQL;
-- Considere como deadline da avaliação a partir do início do teste. Caso tenha sido convidado a realizar o teste e não seja possível concluir dentro deste período, avise a pessoa que o convidou para receber instruções sobre o que fazer.
-- Documentar todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes do que o seu processo de pensamento e decisões à medida que as completa, por isso tente documentar e apresentar os seus hipóteses e decisões na medida do possível.
- 
- 
-
-## O projeto
-
-- Criar as consultas utilizando a linguagem escolhida;
-- Entregar o código gerado do Teste.
-
-### Modelo de Dados:
-
-Para entender o modelo, revisar o diagrama a seguir:
-
-![<img src="samples/model.png" height="500" alt="Modelo" title="Modelo"/>](samples/model.png)
-
-
-## Selects
-
-Construir as seguintes consultas:
-
-- Listar todos Clientes que não tenham realizado uma compra;
-- Listar os Produtos que não tenham sido comprados
-- Listar os Produtos sem Estoque;
-- Agrupar a quantidade de vendas que uma determinada Marca por Loja. 
-- Listar os Funcionarios que não estejam relacionados a um Pedido.
-
-## Readme do Repositório
-
-- Deve conter o título do projeto
-- Uma descrição sobre o projeto em frase
-- Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
-- Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Se está usando github pessoal, referencie que é um challenge by coodesh:  
-
->  This is a challenge by [Coodesh](https://coodesh.com/)
-
-## Finalização e Instruções para a Apresentação
-
-1. Adicione o link do repositório com a sua solução no teste
-2. Verifique se o Readme está bom e faça o commit final em seu repositório;
-3. Envie e aguarde as instruções para seguir. Caso o teste tenha apresentação de vídeo, dentro da tela de entrega será possível gravar após adicionar o link do repositório. Sucesso e boa sorte. =)
-
-
-## Suporte
-
-Para tirar dúvidas sobre o processo envie uma mensagem diretamente a um especialista no chat da plataforma. 
+This is a challenge by [Coodesh](https://coodesh.com).
