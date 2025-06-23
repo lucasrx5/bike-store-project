@@ -1,0 +1,28 @@
+# Arquivos de configuração e cache do SQL Server Management Studio (SSMS)
+*.ssmssln
+*.suo
+*.user
+*.rpt
+*.bak
+*.trc
+
+# Arquivos de backup do SQL
+*.bak
+*.trn
+
+# Pastas e arquivos de cache de editores de código comuns
+.vscode/
+.idea/
+*.vs/
+
+# Arquivos gerados pelo sistema operacional
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.[Ll]nk
